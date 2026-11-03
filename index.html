@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Azkiya Aisyah — Multimedia Engineering Technology Student at PENS. Interested in UI/UX Design, Web Development, and creating meaningful digital experiences." />
+  <title>Azkiya Aisyah — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="nav-brand" onclick="smoothTo('home');return false;">
+      <span class="dot">✦</span> Azkiya Aisyah
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#home"       class="nav-link active" onclick="smoothTo('home');return false;">Home</a>
+      <a href="#about"      class="nav-link"        onclick="smoothTo('about');return false;">About</a>
+      <a href="#skills"     class="nav-link"        onclick="smoothTo('skills');return false;">Skills</a>
+      <a href="#projects"   class="nav-link"        onclick="smoothTo('projects');return false;">Projects</a>
+      <a href="#activities" class="nav-link"        onclick="smoothTo('activities');return false;">Activities</a>
+      <a href="#contact"    class="nav-link"        onclick="smoothTo('contact');return false;">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#home"       onclick="smoothTo('home');closeMobile();return false;">Home</a>
+  <a href="#about"      onclick="smoothTo('about');closeMobile();return false;">About</a>
+  <a href="#skills"     onclick="smoothTo('skills');closeMobile();return false;">Skills</a>
+  <a href="#projects"   onclick="smoothTo('projects');closeMobile();return false;">Projects</a>
+  <a href="#activities" onclick="smoothTo('activities');closeMobile();return false;">Activities</a>
+  <a href="#contact"    onclick="smoothTo('contact');closeMobile();return false;">Contact</a>
+</div>
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-deco-circle1" aria-hidden="true"></div>
+  <div class="hero-deco-circle2" aria-hidden="true"></div>
+  <div class="hero-dots" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="container hero-inner">
+    <!-- Text -->
+    <div class="hero-content">
+      <h1 class="hero-h1">Hi, I'm <span class="hero-name">Azkiya Aisyah</span></h1>
+      <p class="hero-tagline">Multimedia Engineering Technology Student at Electronic Engineering Polytechnic Institute of Surabaya.</p>
+      <p class="hero-desc">Interested in UI/UX Design, Web Development, and creating meaningful digital experiences.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="smoothTo('projects')">
+          Explore My Projects
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn btn-secondary" onclick="smoothTo('about')">More About Me</button>
+      </div>
+      <div class="hero-chips">
+        <span class="chip">UI/UX Design</span>
+        <span class="chip">Web Development</span>
+      </div>
+    </div>
+
+    <!-- Photo -->
+    <div class="hero-photo-wrap">
+      <div class="hero-ring" aria-hidden="true"></div>
+      <div class="hero-badge" aria-hidden="true"><span class="star">✦</span> Creative &amp; Curious</div>
+      <div class="hero-frame">
+        <img src="images/profile.JPG" alt="Azkiya Aisyah — Multimedia Engineering Technology Student"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <span>profile.JPG</span>
+          <span style="font-size:.7rem">Replace with your photo</span>
+        </div>
+      </div>
+      <div class="hero-float-a" aria-hidden="true"></div>
+      <div class="hero-float-b" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid reveal">
+
+      <!-- Photo column -->
+      <div class="about-photo-col">
+        <div class="about-accent" aria-hidden="true"></div>
+        <div class="about-photo-frame">
+          <img src="images/about.jpeg" alt="Azkiya Aisyah"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder" style="display:none;height:100%;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>about.jpeg</span>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div>
+            <div class="stat-num">3.51</div>
+            <div class="stat-lbl">GPA / 4.00</div>
+          </div>
+          <div class="stat-sep"></div>
+          <div>
+            <div class="stat-num">2024</div>
+            <div class="stat-lbl">Enrolled</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content column -->
+      <div class="about-content">
+        <p class="eyebrow">Get to Know Me</p>
+        <h2 class="section-title">A Little About Me</h2>
+        <p class="about-bio">
+          A Multimedia Engineering Technology student with an interest in digital technology development, particularly UI/UX design and web-based application development. Experienced in digital projects, organizational activities, and team coordination. Adaptable, communicative, and comfortable working both collaboratively and independently.        </p>
+
+        <p class="edu-label">Education</p>
+
+        <div class="edu-item">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h3 class="edu-school">Politeknik Elektronika Negeri Surabaya (PENS)</h3>
+            <p class="edu-prog">Bachelor of Applied Science in Multimedia Engineering Technology</p>
+            <div class="edu-meta">
+              <span class="edu-period">August 2024 – Now</span>
+              <span class="edu-gpa">IPK 3.51 / 4.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h3 class="edu-school">MAN 1 Ngawi</h3>
+            <div class="edu-meta">
+              <span class="edu-period">July 2021 – July 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SKILLS
+══════════════════════════════════════════════════════ -->
+<section id="skills" class="section">
+  <div class="container">
+    <p class="eyebrow">What I Work With</p>
+    <h2 class="section-title">My Skills &amp; Tools</h2>
+
+    <div class="skills-grid" style="margin-top:40px;">
+
+      <div class="skill-card reveal" style="--accent:#D9D28B;">
+        <div class="skill-card-hd">
+          <div class="skill-card-icon" style="background:rgba(217,210,139,.25);">✦</div>
+          <h3 class="skill-card-title">UI / UX Design</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Wireframing</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">User Flow</span>
+          <span class="skill-tag">UI Design</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d1" style="--accent:#B2BD7E;">
+        <div class="skill-card-hd">
+          <div class="skill-card-icon" style="background:rgba(178,189,126,.25);">◈</div>
+          <h3 class="skill-card-title">Web Development</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d2" style="--accent:#8E9162;">
+        <div class="skill-card-hd">
+          <div class="skill-card-icon" style="background:rgba(142,145,98,.2);">◇</div>
+          <h3 class="skill-card-title">Programming</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Flutter</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d3" style="--accent:#6A795D;">
+        <div class="skill-card-hd">
+          <div class="skill-card-icon" style="background:rgba(106,121,93,.18);">◉</div>
+          <h3 class="skill-card-title">Development Tools</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Visual Studio Code</span>
+          <span class="skill-tag">GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════════════════════ -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="projects-header reveal">
+      <p class="eyebrow">My Work</p>
+      <h2 class="section-title">Things I've Created</h2>
+      <p class="section-sub">Some projects and ideas I've worked on along my learning journey.</p>
+    </div>
+
+    <!-- P01 — Featured -->
+    <div class="proj-featured reveal">
+      <div class="proj-img-wrap">
+        <img src="images/sirandu.png" alt="SiRandu"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;height:100%;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>sirandu.png</span>
+        </div>
+        <div class="proj-overlay"></div>
+      </div>
+      <div class="proj-content">
+        <span class="proj-num" style="color:#D9D28B;">01</span>
+        <span class="proj-cat">Website Development</span>
+        <h3 class="proj-name">SiRandu</h3>
+        <p class="proj-full">Website Sistem Informasi Desa Randusongo</p>
+        <p class="proj-desc">Developed a web platform to streamline village administrative operations and information management. Designed an intuitive user interface to simplify data handling and day-to-day administrative workflows.</p>
+        <div class="proj-role-wrap">
+          <span class="proj-role-lbl">Role</span>
+          <span class="proj-role">Web Developer</span>
+        </div>
+        <button class="btn btn-primary" onclick="openModal('sirandu')">
+          View Project
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- P02 + P03 — Two columns -->
+    <div class="proj-row reveal">
+      <!-- P02 -->
+      <div class="proj-card">
+        <div class="proj-card-img">
+          <img src="images/sahabatisyarat.png" alt="Sahabat Isyarat"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder" style="display:none;height:100%;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>sahabatisyarat.png</span>
+          </div>
+          <div class="proj-card-num">02</div>
+        </div>
+        <div class="proj-card-body">
+          <span class="proj-cat">Web Development · Accessibility Technology</span>
+          <h3 class="proj-name">Sahabat Isyarat</h3>
+          <p class="proj-desc">Developed an accessible WebRTC video conferencing platform integrated with MediaPipe. Implemented gesture-based sign recognition and live subtitling to facilitate inclusive communication.</p>
+          <div class="proj-card-footer">
+            <span class="proj-role">Web Developer</span>
+            <button class="btn btn-outline btn-sm" onclick="openModal('sahabat')">View Project</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- P03 -->
+      <div class="proj-card">
+        <div class="proj-card-img">
+          <img src="images/solo.png" alt="S.O.L.O"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder" style="display:none;height:100%;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>solo.png</span>
+          </div>
+          <div class="proj-card-num">03</div>
+        </div>
+        <div class="proj-card-body">
+          <span class="proj-cat">UI/UX Design · Website</span>
+          <h3 class="proj-name">S.O.L.O</h3>
+          <p class="proj-desc">Designed the UI/UX for a website using Figma, from user flow planning to interactive prototyping.</p>
+          <div class="proj-card-footer">
+            <span class="proj-role">UI/UX Designer</span>
+            <button class="btn btn-outline btn-sm" onclick="openModal('solo')">View Design</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- P04 — Horizontal -->
+    <div class="proj-horiz reveal">
+      <div class="proj-img-wrap">
+        <img src="images/imajinaku.png" alt="Imajinaku"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;height:100%;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>imajinaku.png</span>
+        </div>
+        <div class="proj-overlay" style="background:linear-gradient(135deg,rgba(106,121,93,.25) 0%,transparent 60%);"></div>
+      </div>
+      <div class="proj-horiz-body">
+        <span class="proj-num" style="color:#6A795D;">04</span>
+        <span class="proj-cat">Augmented Reality</span>
+        <h3 class="proj-name">Imajinaku</h3>
+        <p class="proj-desc">Developing Augmented Reality object interactions to support reading and wildlife learning experiences. Integrating audio elements to enhance user interaction and learning.</p>
+        <div class="proj-role-wrap">
+          <span class="proj-role-lbl">Role</span>
+          <span class="proj-role">AR Interaction &amp; Audio Integration</span>
+        </div>
+        <button class="btn btn-primary" onclick="openModal('imajinaku')">
+          Explore Project
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- P05 — Horizontal reversed -->
+    <div class="proj-horiz rev reveal">
+      <div class="proj-img-wrap">
+        <img src="images/catfe.jpeg" alt="CatFe"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="placeholder" style="display:none;height:100%;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>catfe.jpeg</span>
+        </div>
+        <div class="proj-overlay"></div>
+      </div>
+      <div class="proj-horiz-body">
+        <span class="proj-num" style="color:#D9D28B;">05</span>
+        <span class="proj-cat">UI/UX Design · Mobile Application</span>
+        <h3 class="proj-name">CatFe</h3>
+        <p class="proj-full">CatFe — Cat Café Mobile Application</p>
+        <p class="proj-desc">Designed the UI/UX for the CatFe mobile application, a platform for cat café services. Planned user flows and created interactive prototypes for the menu, shopping cart, and ordering processes.</p>
+        <div class="proj-role-wrap">
+          <span class="proj-role-lbl">Role</span>
+          <span class="proj-role">UI/UX Designer</span>
+        </div>
+        <button class="btn btn-primary" onclick="openModal('catfe')">
+          View Design
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     ACTIVITIES
+══════════════════════════════════════════════════════ -->
+<section id="activities" class="section">
+  <div class="container">
+    <div class="activities-header reveal">
+      <p class="eyebrow">Life Outside The Screen</p>
+      <h2 class="section-title">Beyond the Screen</h2>
+      <p class="section-sub">Beyond technology and digital projects, I enjoy being involved in volunteering activities, collaborating with others, and contributing to meaningful experiences.</p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery-section reveal">
+      <p class="sub-title">Moments &amp; Memories</p>
+      <div class="gallery-grid">
+        <div class="g-item lg">
+          <img src="images/volunteer-01.JPG" alt="Volunteer Activity"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder" style="display:none;height:100%;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>volunteer-01.JPG</span></div>
+          <div class="g-caption">Volunteer Activity</div>
+        </div>
+        <div class="g-item sm">
+          <img src="images/mc.jpeg" alt="Master of Ceremony"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder" style="display:none;height:100%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>mc.jpeg</span></div>
+          <div class="g-caption">Master of Ceremony</div>
+        </div>
+        <div class="g-item sm">
+          <img src="images/volunteer-03.jpg" alt="Team Collaboration"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder" style="display:none;height:100%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>volunteer-03.jpg</span></div>
+          <div class="g-caption">Team Collaboration</div>
+        </div>
+        <div class="g-item sm">
+          <img src="images/interaksi.JPG" alt="Interaction"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder" style="display:none;height:100%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>interaksi.JPG</span></div>
+          <div class="g-caption">Interaction</div>
+        </div>
+        <div class="g-item sm">
+          <img src="images/volunteer-05.jpg" alt="Event Documentation"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder" style="display:none;height:100%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>volunteer-05.jpg</span></div>
+          <div class="g-caption">Event Documentation</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom: Org + Training -->
+    <div class="activities-bottom reveal">
+      <!-- Timeline -->
+      <div>
+        <p class="sub-title">Organizational Experience</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-header">
+                <h4 class="tl-org">EEPIS English Community</h4>
+                <span class="tl-period">2024 – Now</span>
+              </div>
+              <p class="tl-pos">Event Planner Division</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-header">
+                <h4 class="tl-org">Relawanns Community Batch 6 & 7</h4>
+                <span class="tl-period">2026</span>
+              </div>
+              <p class="tl-pos">Management Division</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-header">
+                <h4 class="tl-org">MET Media Manajemen Team</h4>
+                <span class="tl-period">2026 – Now</span>
+              </div>
+              <p class="tl-pos">Public Relation</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-header">
+                <h4 class="tl-org">Immersive Fiesta</h4>
+                <span class="tl-period">2026</span>
+              </div>
+              <p class="tl-pos">Coordinator of Event Division</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-header">
+                <h4 class="tl-org">Pemandu LKMM PENS</h4>
+                <span class="tl-period">2025 – Now</span>
+              </div>
+              <p class="tl-pos">Material Commission</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-header">
+                <h4 class="tl-org">TRM Goes To School</h4>
+                <span class="tl-period">2026</span>
+              </div>
+              <p class="tl-pos">Event Division</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-header">
+                <h4 class="tl-org">Amgala Squad Surabaya</h4>
+                <span class="tl-period">2025 – 2026</span>
+              </div>
+              <p class="tl-pos">Volunteer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Training -->
+      <div class="training-section">
+        <p class="sub-title">Learning &amp; Development</p>
+        <div class="training-list">
+          <div class="training-item">
+            <span class="training-star">✦</span>
+            <div>
+              <h4 class="training-name">Study Jam 1: UI/UX Development</h4>
+              <p class="training-meta">GDGoC PENS · 2025</p>
+            </div>
+          </div>
+          <div class="training-item">
+            <span class="training-star">✦</span>
+            <div>
+              <h4 class="training-name">LKMM-TM FEB UNESA</h4>
+              <p class="training-meta">FEB UNESA · 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <p class="eyebrow" style="justify-content:center;">Get In Touch</p>
+      <h2 class="section-title">Let's Connect!</h2>
+      <p class="section-sub" style="margin:0 auto;">Have an idea, a project, or just want to say hello? Feel free to reach out!</p>
+
+      <div class="contact-grid">
+        <a href="https://wa.me/6285707521163" target="_blank" rel="noopener noreferrer" class="contact-card primary" aria-label="Chat on WhatsApp">
+          <div class="contact-card-icon g">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-lbl">WhatsApp</span>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+
+        <a href="mailto:kakiyazki@gmail.com" class="contact-card" aria-label="Send email to kakiyazki@gmail.com">
+          <div class="contact-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-lbl">Email</span>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/azkiya-aisyah-833084317/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Visit LinkedIn profile">
+          <div class="contact-card-icon o">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-lbl">LinkedIn</span>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+
+        <a href="https://instagram.com/azkiyasyh" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Visit Instagram profile">
+          <div class="contact-card-icon d">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-lbl">Instagram</span>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <button class="footer-brand" onclick="smoothTo('home')"><span class="dot">✦</span> Azkiya Aisyah</button>
+      <p class="footer-tag">Livin to learn, learning to thrive.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a onclick="smoothTo('home')">Home</a>
+      <a onclick="smoothTo('about')">About</a>
+      <a onclick="smoothTo('skills')">Skills</a>
+      <a onclick="smoothTo('projects')">Projects</a>
+      <a onclick="smoothTo('activities')">Activities</a>
+      <a onclick="smoothTo('contact')">Contact</a>
+    </nav>
+  </div>
+  <div class="container">
+    <p class="footer-copy">&copy; <span id="year"></span> Azkiya Aisyah. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════
+     PROJECT MODAL
+══════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Project details" onclick="handleOverlayClick(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-img-wrap">
+      <img id="modalImg" src="" alt="" onerror="this.style.display='none';document.getElementById('modalImgPh').style.display='flex';" />
+      <div id="modalImgPh" class="placeholder" style="display:none;height:100%;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span id="modalImgPh_label"></span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <span id="modalCat" class="proj-cat"></span>
+      <h2 id="modalTitle" class="modal-title"></h2>
+      <p id="modalSubtitle" class="modal-subtitle"></p>
+      <p id="modalDesc" class="modal-desc"></p>
+      <div class="proj-role-wrap">
+        <span class="proj-role-lbl">Role</span>
+        <span id="modalRole" class="proj-role"></span>
+      </div>
+      <div class="modal-notice">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <span>Project link coming soon.</span>
+      </div>
+      <button class="btn btn-primary modal-cta" onclick="closeModal()">Back to Portfolio</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
